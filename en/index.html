@@ -24,6 +24,22 @@
 
   gtag('config', 'G-VJFDD2SRX2');
 </script>
+<!-- Event snippet for 联系人10/13 conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17857288385/Vs3lCOj0-ZodEMGxgsNC',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
 
   <link rel="icon" type="image/png" href="../logo.png">
   <meta charset="utf-8">
